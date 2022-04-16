@@ -1,11 +1,10 @@
 package com.ec25p5e.market.data.repsository
 
 import com.ec25p5e.market.data.csv.CSVParser
-import com.ec25p5e.market.data.csv.CompanyListingsParser
 import com.ec25p5e.market.data.local.StockDatabase
 import com.ec25p5e.market.data.mapper.toCompanyListing
 import com.ec25p5e.market.data.mapper.toCompanyListingEntity
-import com.ec25p5e.market.data.remote.dto.StockApi
+import com.ec25p5e.market.data.remote.StockApi
 import com.ec25p5e.market.domain.model.CompanyListing
 import com.ec25p5e.market.domain.repository.StockRepository
 import com.ec25p5e.market.util.Resource
@@ -18,9 +17,9 @@ import javax.inject.Singleton
 
 @Singleton
 class StockRepositoryImpl @Inject constructor(
-    val api: StockApi,
-    val db: StockDatabase,
-    val companyListingsParser: CSVParser<CompanyListing>
+    private val api: StockApi,
+    private val db: StockDatabase,
+    private val companyListingsParser: CSVParser<CompanyListing>
 ): StockRepository {
 
     private val dao = db.dao

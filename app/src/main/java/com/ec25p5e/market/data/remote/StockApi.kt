@@ -1,4 +1,4 @@
-package com.ec25p5e.market.data.remote.dto
+package com.ec25p5e.market.data.remote
 
 import okhttp3.ResponseBody
 import retrofit2.http.GET
