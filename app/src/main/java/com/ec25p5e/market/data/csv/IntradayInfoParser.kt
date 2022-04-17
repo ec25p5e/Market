@@ -2,7 +2,6 @@ package com.ec25p5e.market.data.csv
 
 import com.ec25p5e.market.data.mapper.toIntradayInfo
 import com.ec25p5e.market.data.remote.dto.IntradayInfoDto
-import com.ec25p5e.market.domain.model.CompanyListing
 import com.ec25p5e.market.domain.model.IntradayInfo
 import com.opencsv.CSVReader
 import kotlinx.coroutines.Dispatchers
@@ -28,7 +27,7 @@ class IntradayInfoParser @Inject constructor(): CSVParser<IntradayInfo> {
                     dto.toIntradayInfo()
                 }
                 .filter {
-                    it.date.dayOfMonth == LocalDateTime.now().minusDays(1).dayOfMonth
+                    it.date.dayOfMonth == LocalDateTime.now().minusDays(4).dayOfMonth
                 }
                 .sortedBy {
                     it.date.hour
