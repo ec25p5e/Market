@@ -21,7 +21,7 @@ import javax.inject.Singleton
 @Singleton
 class StockRepositoryImpl @Inject constructor(
     private val api: StockApi,
-    private val db: StockDatabase,
+    db: StockDatabase,
     private val companyListingsParser: CSVParser<CompanyListing>,
     private val intradayInfoParser: CSVParser<IntradayInfo>
 ): StockRepository {
@@ -51,11 +51,11 @@ class StockRepositoryImpl @Inject constructor(
                 val response = api.getListings()
                 companyListingsParser.parse(response.byteStream())
             } catch(e: IOException) {
-                e.printStackTrace();
+                e.printStackTrace()
                 emit(Resource.Error("Couldn't load data"))
                 null
             } catch(e: HttpException) {
-                e.printStackTrace();
+                e.printStackTrace()
                 emit(Resource.Error("Couldn't load data"))
                 null
             }

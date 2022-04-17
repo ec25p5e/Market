@@ -11,6 +11,7 @@ import java.io.InputStreamReader
 import java.time.LocalDateTime
 import javax.inject.Inject
 
+@Suppress("BlockingMethodInNonBlockingContext")
 class IntradayInfoParser @Inject constructor(): CSVParser<IntradayInfo> {
 
     override suspend fun parse(stream: InputStream): List<IntradayInfo> {

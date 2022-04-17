@@ -5,7 +5,6 @@ import com.ec25p5e.market.domain.model.CompanyListing
 import com.ec25p5e.market.domain.model.IntradayInfo
 import com.ec25p5e.market.util.Resource
 import kotlinx.coroutines.flow.Flow
-import java.text.DateFormatSymbols
 
 interface StockRepository {
 

@@ -1,6 +1,5 @@
 package com.ec25p5e.market.presentation.company_info
 
-import android.widget.Space
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.CircularProgressIndicator
@@ -8,11 +7,9 @@ import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Alignment.Companion.Center
 import androidx.compose.ui.Alignment.Companion.CenterHorizontally
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -24,6 +21,7 @@ import com.ramcosta.composedestinations.annotation.Destination
 
 @Composable
 @Destination
+@Suppress("UNUSED_PARAMETER")
 fun CompanyInfoScreen(
     symbol: String,
     viewModel: CompanyInfoViewModel = hiltViewModel()
@@ -59,14 +57,14 @@ fun CompanyInfoScreen(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Industry: ${company.industry}",
+                    text = "Industria: ${company.industry}",
                     fontSize = 14.sp,
                     modifier = Modifier.fillMaxWidth(),
                     overflow = TextOverflow.Ellipsis
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Country: ${company.country}",
+                    text = "Nazione/Paese: ${company.country}",
                     fontSize = 14.sp,
                     modifier = Modifier.fillMaxWidth(),
                     overflow = TextOverflow.Ellipsis

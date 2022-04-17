@@ -4,7 +4,6 @@ import com.ec25p5e.market.data.csv.CSVParser
 import com.ec25p5e.market.data.csv.CompanyListingsParser
 import com.ec25p5e.market.data.csv.IntradayInfoParser
 import com.ec25p5e.market.data.repsository.StockRepositoryImpl
-import com.ec25p5e.market.domain.model.CompanyInfo
 import com.ec25p5e.market.domain.model.CompanyListing
 import com.ec25p5e.market.domain.model.IntradayInfo
 import com.ec25p5e.market.domain.repository.StockRepository

@@ -8,6 +8,7 @@ import java.io.InputStream
 import java.io.InputStreamReader
 import javax.inject.Inject
 
+@Suppress("BlockingMethodInNonBlockingContext")
 class CompanyListingsParser @Inject constructor(): CSVParser<CompanyListing> {
 
     override suspend fun parse(stream: InputStream): List<CompanyListing> {
